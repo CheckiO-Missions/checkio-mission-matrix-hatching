@@ -1,0 +1,34 @@
+<!-- Describe task in general -->
+
+<p>
+    You are given a 2-dimensional matrix: {% if is_js %}an Array of Arrays of numbers{% else %}a list of lists of integers{% endif %}. Your function should return another {% if is_js %}Array of Arrays{% else %}Iterable of lists{% endif %}, where each inner {% if is_js %}Array{% else %}list{% endif %} is a sequence of matrix elements on the same diagonal "stroke". The order of elements in the "stroke" is SW -> NE. So, building these sequences is like "hatching" the matrix!
+</p>
+<p>
+    Let's look at the example. The matrix may NOT be square!
+</p>
+<pre class="brush: python">
+assert hatching([[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]]) == [[1],
+                                 [4, 2],
+                                 [7, 5, 3],
+                                 [8, 6],
+                                 [9]]
+</pre>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input:</strong> {% if is_js %}Array of Arrays of numbers{% else %}List of lists of integers{% endif %}.
+</p>
+
+<p>
+    <strong>Output:</strong> {% if is_js %}Array of Arrays of numbers{% else %}List or another Iterable (generator, iterator) of lists of integers{% endif %}. 
+</p>
+
+
+<p>
+    <strong>Examples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
